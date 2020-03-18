@@ -7,8 +7,18 @@
 //
 
 import Foundation
+import Firebase
 
 //we will do test
 struct DBUser {
     var name = "Alex"
+}
+
+extension DBUser {
+    // computed property
+    var getAuthUser: User? { //this is Firebase user
+        guard let user = Auth.auth().currentUser
+            else { return nil }
+        return user
+    }
 }

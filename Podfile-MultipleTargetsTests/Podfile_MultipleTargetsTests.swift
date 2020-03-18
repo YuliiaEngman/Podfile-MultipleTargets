@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Podfile_MultipleTargets  // importing entire project files
+//ERROR: Missing required module Firebase (because we imported Firebase to DBUser file)
 
 
 class Podfile_MultipleTargetsTests: XCTestCase {
@@ -24,6 +25,8 @@ class Podfile_MultipleTargetsTests: XCTestCase {
         //assert
         XCTAssertEqual(sut, expectedName)
     }
+    
+    
 
 
 }
